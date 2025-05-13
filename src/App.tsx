@@ -40,7 +40,7 @@ export const App = () => {
   };
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value.replace(/[^a-zA-Z0-9\s]/g, '');
+    const value = event.target.value; // Removed sanitization logic
 
     setTitle(value);
     if (titleError) {
